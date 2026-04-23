@@ -1,0 +1,106 @@
+@media (max-width: 1440px) {
+    .block {
+      width: 50%;
+    } 
+    .settingsModal {
+      width: 60%;
+      left: 20%;
+    }
+    .gameBox{
+        height: auto;
+    }
+    .levelModal{
+      width: 66%;
+    }
+
+  }
+
+@media (max-width: 1024px) {
+    .block{
+      width: 70%;
+    }
+    .settingsModal {
+      width: 60%;
+      left: 20%;
+    }
+    .gameBox{
+      height: auto;
+    }
+  }
+
+
+  @media (max-width: 768px) {
+    .block{
+      width: 80%;
+    }
+    .gameBox{
+        height: auto;
+    }
+    .settingsModal {
+      width: 75%;
+      left: 10%;
+    }
+    .pauseModal {
+      height: 270px;
+    }
+    .pauseModal button {
+      height: 45px;
+    }
+    .levelModal{
+      width: 76%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .page{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .block {
+      width: 100%;
+    }
+    #mobileArrowButtons{
+        display: flex;
+        margin-top: 60px;
+    }
+    .mobileArrowUp{
+        display: flex;
+    }
+    .scoreBox {
+      font-size: 12px;
+    }
+    .pauseModal {
+      top: 6%;
+      height: 270px;
+    }
+    .pauseModal button {
+      height: 45px;
+    }
+    .board{
+      padding: 15px;
+    }
+    .settingsModal {
+      width: 80%;
+      left: 5%;
+      top:5%;
+      height: 270px;
+    }
+    .levelModal{
+      width: 68%;
+      padding-inline: 10px;
+    }
+    .levelModal button{
+      width: 30%;
+      height: 25px;
+      border-radius: 5px;
+      font-size: 12px;
+    }
+    #btnLevel{
+      font-size: 12px;
+    }
+    #btnTheme{
+      font-size: 12px;
+    }
+  }

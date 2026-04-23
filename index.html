@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="stylesheet" href="./styles/media/media.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="page">
+      <div class="block">
+        <div class="scoreBox">
+          <div class="scores">
+            <div class="foodScore">
+              <div class="foodScoreRound">
+                <img src="./styles/images/apple.png" />
+              </div>
+              <span class="score">0</span>
+            </div>
+            <div class="recordScore">
+              <div class="recordScoreCup">
+                <img src="./styles/images/cupImage.png" />
+                <!-- <i class="fa-solid fa-trophy"></i> -->
+              </div>
+              <span class="recordScoreNum">0</span>
+            </div>
+          </div>
+          <div class="volumeBox">
+            <button id="btnPause">
+              <i class="fa-solid fa-pause"></i>
+            </button>
+            <button id="btnVolume">
+              <i class="fa-solid fa-volume-high"></i>
+            </button>
+          </div>
+        </div>
+        <div class="gameBox">
+          <div class="board">
+            <div class="startGameModal">
+              <button id="btnStartGame">Start</button>
+              <button id="btnSettings">Settings</button>
+            </div>
+            <div class="gameOverModal">
+              <h1>GAME OVER !</h1>
+              <h3 class="gameOverScore"></h3>
+              <button id="gameOverBtnRestart">Restart</button>
+              <button id="gameOverBtnMainMenu">Main Menu</button>
+            </div>
+            <div class="pauseModal">
+              <button id="btnResume">Resume</button>
+              <button id="btnRestart">Restart</button>
+              <button id="btnMainMenu">Main Menu</button>
+            </div>
+            <div class="settingsModal">
+              <div class="settingsModalHeader">
+                <button id="settingsModalBackBtn">
+                  <i class="fa-solid fa-circle-arrow-left"></i>
+                </button>
+                <h2>Settings</h2>
+              </div>
+              <div class="settingsModalBtns">
+                <div class="settingsLevel">
+                  <div class="settingsLevelBtn">
+                    <button id="btnLevel">Difficulty</button>
+                  </div>
+                  <div class="levelModal">
+                    <button id="btnEasyLevel">Easy</button>
+                    <button id="btnMediumLevel">Medium</button>
+                    <button id="btnHardLevel">Hard</button>
+                  </div>
+                </div>
+                <div class="settingsTheme">
+                  <div class="settingsThemeBtn">
+                    <button id="btnTheme">Theme</button>
+                  </div>
+                  <div class="themeModal">
+                    <button id="btnThemeToggle" class="themeToggle">
+                      <span class="icon sun"><i class="fa-solid fa-sun"></i></span>
+                      <span class="icon moon"><i class="fa-solid fa-moon"></i></span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="settingsSave">
+                <button id="btnSettingsSave">Ok</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="mobileArrowButtons">
+        <div class="mobileArrowUp">
+          <button id="up"><i class="fa-solid fa-arrow-up"></i></button>
+        </div>
+        <div class="mobileArrowSights">
+          <button id="left"><i class="fa-solid fa-arrow-left"></i></button>
+          <button id="right"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+        <div class="mobileArrowDown">
+          <button id="down"><i class="fa-solid fa-arrow-down"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
