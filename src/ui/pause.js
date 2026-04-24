@@ -11,6 +11,7 @@ export function pauseGame() {
   if (loop === null) return;
 
   clearInterval(loop);
+  // modals.gameBox.style.background = "red"
   modals.pause.style.display = "flex";
   paused = true;
 }

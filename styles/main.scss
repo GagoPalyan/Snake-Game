@@ -14,6 +14,19 @@ body {
   color: $textColorDark;
   }
 }
+body.dark .startGameModal {
+  background: #087508;
+  color: #fff;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+body.dark .scoreBox {
+ background-color: rgb(3 61 3);
+}
+
+// body.dark .cell-dark{
+//   background-color: rgb(11 77 11);
+// }
 
 .cell {
   width: 100%;
@@ -37,7 +50,7 @@ body {
 }
 .scoreBox{
     height: 100px;
-    padding: 10px;
+    padding-inline: 15px;
     background-color: $bgHeader;
     @include flex(space-between,center);
     gap: 20px;
@@ -53,7 +66,6 @@ body {
 }
 .foodScoreRound img{
     width: 40px;
-    margin-left: 10px;
 }
 .recordScore{
     @include flex(center,center);
@@ -68,24 +80,26 @@ body {
     height: 40px;
 }
 .volumeBox{
-    width: 20%;
     display: flex;
-    gap: 15px;
-    justify-content: center;
-    margin-right: 5%;
+    gap: 20px;
 }
 .volumeBox button{
     cursor: pointer;
     background: transparent;
     border: none;
     color: white;
-    font-size: 34px;
     position: relative;
+}
+#btnPause{
+  font-size: 33px;
+}
+#btnVolume{
+  font-size: 27px;
 }
 #btnVolume.muted::after {
   content: "";
   position: absolute;
-  width: 60px;
+  width: 45px;
   height: 3px;
   z-index: 999;
   background: white;
@@ -119,7 +133,7 @@ body {
 }
 
 .snake {
-  border-radius: $radius;
+  border-radius: 25%;
   position: relative;
   background: $levelEasy;
 }
@@ -162,10 +176,11 @@ body {
 }
 
 .pauseModal{
-   @include modal(40%,330px,20%,30%,20px,rgba(85, 177, 148, 0.6));
+   @include modal(40%,20px,#80C480);
    justify-content: center;
    align-items: center;
    border-radius: 18px;
+   padding-block: 35px;
 }
 
 .pauseModal button{
@@ -173,12 +188,14 @@ body {
 }
 
 .settingsModal{
-  @include modal(52%,250px,29%,23%,10px,rgb(30, 141, 106));
+  @include modal(58%,10px,#F3FAEA);
   border-radius: 14px;
-  padding-left: 30px;
+  padding-bottom: 10px;
+  // padding-inline: 15px;
 }
 
 .settingsModalBtns{
+    padding-inline: 15px;
     gap: 13px;
     height: 115px;
     display: flex;
@@ -187,14 +204,19 @@ body {
 
 .settingsModalHeader{
     display: flex;
+    height: 60px;
     align-items: center;
+    background-color: #E5F3D9;
+    padding-inline: 15px;
     gap:10px;
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
 }
 
 .settingsModalHeader button{
     background-color: transparent;
-    font-size: 20px;
-    color: rgb(42, 42, 180);
+    font-size: 24px;
+    color: #33863F;
     border:none;
     cursor: pointer;
 }
@@ -204,9 +226,9 @@ body {
 }
 
 .settingsLevel{
-  width: 95%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 #btnLevel{
@@ -214,27 +236,27 @@ body {
 }
 
 .levelModal {
-  width: 75%;
-  background: linear-gradient(145deg, #1e1e2f, #141421);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  width: 60%;
+  background-color: #D9EDCD;
   @include flexCenter();
   gap: 10px;
   border-radius:$radius;
   z-index: 999;
   color: white;
+  padding: 8px 10px;
 }
 
 .levelModal button {
-  width: 28%;
-  height: 30px;
-  border-radius: 10px;
-  border: 1px solid;
+  padding: 6px 14px;
+  border-radius: 8px;
+  border: 1px solid #9ECD98;
   cursor: pointer;
+  color: #9ECD98;
   font-size: 12px;
 }
 
 .active{
-    background-color: #1e1e2f;
+    background-color: #33863F;
     color: white;
 }
 
@@ -252,7 +274,7 @@ body {
 }
 
 .themeModal{
-    width: 50%;
+    width: 47%;
     height: 50px;
     background-color:transparent;
     @include flexCenter();
@@ -265,7 +287,7 @@ body {
 .themeToggle {
   width: 60px;
   height: 30px;
-  background: #1e293b;
+  background: #2C7736;
   border-radius: 20px;
   border: none;
   position: relative;
@@ -307,38 +329,27 @@ body.dark .themeToggle::before {
   right: 8px;
 }
 .settingsSave{
-  width: 100%;
-  height: 30px;
   display: flex;
   justify-content: flex-end;
+  padding-inline: 15px;
 }
 .settingsSave button{
-  @include btnStartGameAndSettings();
-  margin-right: 6%;
-}
-
-#btnVolumeIcon{
-    display: none;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    font-size: 20px;
-    position: absolute;
-    top:49%;
-    left:33%;
-    color: white;
-    margin-left: 10%;
-    z-index: 999;
+  padding: 10px 26px;
+  background-color: #239D22;
+  border: none;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
 #mobileArrowButtons{
-    width: 90%;
     height: 150px;
     display: none;
     flex-direction: column;
     gap:2px;
     justify-content: center;
-    margin-top: 20px;
+    padding-block: 10px;
+    padding-inline: 10px;
 }
 .mobileArrowUp{
     display: flex;

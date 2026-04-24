@@ -3,6 +3,7 @@ export const modals = {
   pause: document.querySelector(".pauseModal"),
   gameOver: document.querySelector(".gameOverModal"),
   settings: document.querySelector(".settingsModal"),
+  // gameBox : document.querySelector(".gameBox")
 };
 
 export function closeAllModals() {

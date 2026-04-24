@@ -48,10 +48,10 @@ export function settingsUI({
     setLevelColor(state.level, grid);
     recordScores(records, state.level, recordScore);
     const newTheme = theme.getSelectedTheme();
-    console.log(newTheme)
     applyTheme(newTheme);
     localStorage.setItem("theme", newTheme);
     theme.setCurrentTheme(newTheme);
+    modals.settings.style.display = 'none'
   });
 
   buttons.settingsModalBackBtn.addEventListener("click", () => {
